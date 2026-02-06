@@ -14,17 +14,38 @@ document.getElementById("task-status").innerText = "Status: " + task.status;
 document.getElementById("task-date").innerText = "Created: " + task.createdAt;
 
 /* =========================
-   Rating logic
+   Rating logic (UPDATED)
 ========================= */
 const stars = document.querySelectorAll(".stars span");
 const ratingText = document.getElementById("rating-value");
-let currentRating = 0;
+
+const TASK_ID = task.id; // gắn theo task
+let currentRating = localStorage.getItem(`rating_task_${TASK_ID}`) || 0;
+
+// Load rating cũ
+if (currentRating > 0) {
+    updateStars(currentRating);
+    ratingText.innerText = `Đã đánh giá: ${currentRating} sao`;
+} else {
+    ratingText.innerText = "Chưa đánh giá";
+}
 
 stars.forEach(star => {
+    // hover preview
+    star.addEventListener("mouseover", () => {
+        updateStars(star.dataset.value);
+    });
+
+    // click save
     star.addEventListener("click", () => {
         currentRating = star.dataset.value;
+        localStorage.setItem(`rating_task_${TASK_ID}`, currentRating);
+        ratingText.innerText = `Đã đánh giá: ${currentRating} sao`;
+    });
+
+    // reset hover
+    star.addEventListener("mouseout", () => {
         updateStars(currentRating);
-        ratingText.innerText = "Đã đánh giá: " + currentRating + " sao";
     });
 });
 

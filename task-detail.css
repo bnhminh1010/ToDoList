@@ -69,3 +69,11 @@ body {
     padding: 8px 15px;
     cursor: pointer;
 }
+
+.stars span {
+    transition: 0.2s;
+}
+
+.stars span:hover {
+    transform: scale(1.2);
+}
