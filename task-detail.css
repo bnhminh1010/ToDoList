@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+.task-detail-container {
+    width: 600px;
+    margin: 40px auto;
+}
+
+.task-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.task-meta {
+    margin-top: 10px;
+    color: #666;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Rating */
+.rating-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.stars span {
+    font-size: 30px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.stars span.active {
+    color: gold;
+}
+
+/* Comments */
+.comments-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.comment {
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.comment-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.comment-form input {
+    flex: 1;
+    padding: 8px;
+}
+
+.comment-form button {
+    padding: 8px 15px;
+    cursor: pointer;
+}

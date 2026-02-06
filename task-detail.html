@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task Detail</title>
+    <link rel="stylesheet" href="task-detail.css">
+</head>
+
+<body>
+
+    <div class="task-detail-container">
+
+        <!-- Task Info -->
+        <div class="task-card">
+            <h2 id="task-title">Task title</h2>
+            <p id="task-desc">Task description...</p>
+
+            <div class="task-meta">
+                <span id="task-status">Status: Pending</span>
+                <span id="task-date">Created: --/--/----</span>
+            </div>
+        </div>
+
+        <!-- Rating -->
+        <div class="rating-box">
+            <h3>Đánh giá mức độ quan trọng</h3>
+            <div class="stars" id="rating-stars">
+                <span data-value="1">★</span>
+                <span data-value="2">★</span>
+                <span data-value="3">★</span>
+                <span data-value="4">★</span>
+                <span data-value="5">★</span>
+            </div>
+            <p id="rating-value">Chưa đánh giá</p>
+        </div>
+
+        <!-- Comments -->
+        <div class="comments-box">
+            <h3>Bình luận</h3>
+
+            <div id="comment-list"></div>
+
+            <div class="comment-form">
+                <input type="text" id="comment-input" placeholder="Nhập bình luận...">
+                <button id="comment-btn">Gửi</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="task-detail.js"></script>
+</body>
+
+</html>
